@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+
+<h4>1. Type of Operator:</h4>
+<pre>Type of operator in javascript is used to find the return type of a variable. basically it returns the data-type of a variable.
+After typeof we write a operand and the "typeof" function finds what data-type of operand it is.
+there are different type of variables like:
+1. Numbers
+2. strings
+3. Boolean
+4. Symbols
+5. Objects
+6. Null
+7. Undefined
+
+Eg: 1. typeof 5 --> returns number
+    2. typeof "xxx" --> returns string
+    3. typeof true --> returns boolean.
+References:
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof" target="_blank">ref1</a>
+<a href="http://www.w3schools.com/js/js_operators.asp" target="_blank">ref2</a>
+<a href="https://msdn.microsoft.com/en-us/library/259s7zc1(v=vs.94).aspx" target="_blank">ref3</a>
+<a href="http://www.javascriptkit.com/javatutors/determinevar2.shtml" target="_blank">ref4</a>
+<a href="http://www.w3resource.com/javascript/operators/typeof.php" target="_blank">ref5</a>
+</pre>
+
+<h4>2. Examples of javascript datatypes.</h4>
+<pre>There are many data-types used in javascript like numbers,strings,boolean,objects etc.
+In javascript it evaluates the expression from left to right and for different sequences there would be different results.
+
+Example using data-type numbers
+var x= 5+1;
+
+
+Ans: x=6
+
+Example using data-type numbers and string
+
+
+var x= 5+1+ "sukanya";
+
+
+
+Ans: x=6sukanya.
+
+
+var x= "sukanya" +5+1;
+
+
+Ans: x=sukanya51
+
+the above 2 examples has different answers. in the first it adds the both numbers and if string and numbers are used then numbers are considerd as strings.
+and javascript evaluates the expression from left to right. whereas in second example first the string is there in the left so, everything in the expression is considered as string.
+
+References:
+<a href="http://www.w3schools.com/js/js_datatypes.asp" target="_blank">ref1</a>
+<a href="http://www.way2tutorial.com/javascript/javascript_datatypes_with_examples.php" target="_blank">ref2</a>
+<a href="https://msdn.microsoft.com/en-us/library/7wkd9z69(v=vs.94).aspx" target="_blank">ref3</a>
+<a href="http://www.javatpoint.com/javascript-data-types" target="_blank">ref4</a>
+<a href="http://cjihrig.com/blog/javascript-data-types/" target="_blank">ref5</a>
+</pre>
+
+<h4>3. What is operator precedence, explain by an example.</h4>
+<pre>
+
+The order in which the operators should be evaluated is known as operator precedence.
+the operator precedence from highest to lowest:
+(),[],.  --> left to right
+++,--  --> right to left
+/,*,%,+,-  --> left to right 
+>>,<<,>,>=,<,<=,==,!=  --> left to right
+&
+^
+|
+&&
+||
+
+
+Eg:
+4+5+6*2
+Ans:21 but not 30 because we need to consider operator precedence.
+in the above example the * operator has 1st precedence. so after multiplying add the remaing numbers.
+
+4+5+(6*2)
+here the() has higher priority so, the answer is 21.
+
+References:
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence" target="_blank">ref1</a>
+<a href="https://msdn.microsoft.com/en-us/library/z3ks45k7(v=vs.94).aspx" target="_blank">ref2</a>
+<a href="http://www.w3schools.com/js/js_arithmetic.asp" target="_blank">ref3</a>
+<a href="http://www.scriptingmaster.com/javascript/operator-precedence.asp" target="_blank">ref4</a>
+<a href="http://www.javascriptkit.com/jsref/precedence_operators.shtml" target="_blank">ref5</a>
+</pre>
+
+<h4>4. What is logical and, logical or?</h4>
+<pre>Basically the logical operators are used to determine the logic between variables or values.
+The logical operators mainly deals with boolean operators.
+Logical AND:
+this operators returns true if all expressions are true and returns false if any of the expression is false.
+eg:
+
+var x = 1
+var y = 1
+
+(x < 5 && y > 1)
+
+Ans: false
+
+eg:
+
+var x = 2
+var y = 5
+var z = 1
+
+
+(x < 3 && y > 1 && z < 2)
+
+Ans: true
+
+Logical OR:
+This operator returns false only if all the expressions are false and returns true if any of the expression is true.
+
+eg:
+
+var x = 6;
+var y = 3;
+
+
+(x < 10 || y == 1) 
+
+
+Ans: True
+
+var x = 6;
+var y = 3;
+
+(x ==4 || y == 1) 
+
+
+Ans: False
+
+References:
+<a href="http://www.w3schools.com/js/js_comparisons.asp" target="_blank">ref1</a>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators" target="_blank">ref2</a>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators" target="_blank">ref3</a>
+<a href="http://www.quirksmode.org/js/boolean.html" target="_blank">ref4</a>
+<a href="http://www.w3resource.com/javascript/operators/logical-operator.php" target="_blank">ref5</a>
+
+</pre>
+<h4>5. What is truthy and falsy values mean?</h4>
+<pre>Truthy value: The truthy value in javascript translates to true when evaluated in a boolean context
+eg: all numbers except 0, true, empty array, empty object
+to find truthy or not
+eg:
+logTruthiness(1);
+Ans: truthy
+logTruthiness({});
+Ans: truthy
+logTruthiness([]);
+Ans: truthy
+Falsy value: Same as truthy value i.e it ranslates to false when evaluated in a boolean context
+eg: 0,false,empty string, null, undefined
+to find falsy or not
+eg:
+logTruthiness(0);
+Ans: falsy
+logTruthiness("");
+Ans: falsy
+logTruthiness(null);
+Ans: falsy
+
+Reference:
+<a href="https://developer.mozilla.org/en-US/docs/Glossary/Falsy" target="_blank">ref1</a>
+<a href="https://docs.nodejitsu.com/articles/javascript-conventions/what-are-truthy-and-falsy-values/" target="_blank">ref2</a>
+<a href="http://adripofjavascript.com/blog/drips/truthy-and-falsy-values-in-javascript.html" target="_blank">ref3</a>
+<a href="https://www.sitepoint.com/javascript-truthy-falsy/" target="_blank">ref4</a>
+<a href="https://developer.mozilla.org/en-US/docs/Glossary/Truthy" target="_blank">ref5</a>
+</pre>
+</body>
+</html>
+
