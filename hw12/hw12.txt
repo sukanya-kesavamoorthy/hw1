@@ -1,0 +1,170 @@
+
+1) constructor? and new key word? why do we use it?
+constructor is used to create multiple objects with the same properties and methods. while using constructor we use "this" in the object as the substitute for the new object.
+It doesnt have any value assigned just used as a substitute. new keyword is used to crate objects with the same properties.
+
+<script>
+
+function office(n, d, t){
+
+this.name = n;
+this.domain = d;
+this.time = t;
+
+}
+    
+var sukanya = new office("Federal", "UI",3 );
+var vinithra = new office("Federal", "SQL", 4);
+
+document.write("sukanya is learning " + sukanya.domain + " vinithra is learning  " + vinithra.domain);
+</script>
+
+
+
+
+References:
+http://www.w3schools.com/js/js_objects.asp
+http://www.w3schools.com/js/js_object_definition.asp
+https://css-tricks.com/understanding-javascript-constructors/
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects
+http://www.howtocreate.co.uk/tutorials/javascript/objects
+
+
+2) instanceof
+Object is the instance of the class that have some memory and the instance is a variable which have the same properties and methods the object has.
+It is checked whether it belongs to the instance of that object or not by
+syntax: object instance of constructor.
+
+eg:
+<script>
+
+function office(n, d, t){
+
+this.name = n;
+this.domain = d;
+this.time = t;
+
+}
+    
+var sukanya = new office("Federal", "UI",3 );
+var vinithra = new office("Federal", "SQL", 4);
+
+
+document.write(sukanya instanceof office);
+
+</script>
+
+References:
+http://stackoverflow.com/questions/7002486/what-does-is-an-instance-of-mean-in-javascript
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/instanceof
+http://javascript.info/tutorial/instanceof
+http://stackoverflow.com/questions/6395754/difference-between-reference-and-instance-in-javascript
+http://www.w3schools.com/jsref/jsref_operators.asp
+
+
+3) prototype?
+
+In javascript every object is referred as prototype. All the objects inherit the properties and mehods from their prototye.
+while creating new objects they inherit from a prototype called object. prototype.
+creating a prototye in a standard way is by using object constructor function. in the 3rd question we have used an example for creating a object using constructor.
+In that the office function ia an prototype and by using new keyword we are creating new objects from the same prototype office.
+
+<script>
+
+function office(n, d, t){
+
+this.name = n;
+this.domain = d;
+this.time = t;
+
+}
+    
+var sukanya = new office("Federal", "UI",3 );
+var vinithra = new office("Federal", "SQL", 4);
+
+document.write("sukanya is learning " + sukanya.domain + " vinithra is learning  " + vinithra.domain);
+</script>
+
+
+we can also add new properties to the existing prototype. that is by using object.prototype.property.
+
+<script>
+
+function office(n, d, t){
+
+this.name = n;
+this.domain = d;
+this.time = t;
+
+}
+office.prototype.area = "Arkansas" ;
+ 
+var sukanya = new office("Federal", "UI",3 );
+var vinithra = new office("Federal", "SQL", 4);
+
+document.write("sukanya is learning " + sukanya.domain + " in " + sukanya.area + "and  vinithra is learning  " + vinithra.domain);
+</script>
+
+
+References:
+http://javascriptissexy.com/javascript-prototype-in-plain-detailed-language/
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/prototype
+http://www.w3schools.com/js/js_object_prototypes.asp
+http://yehudakatz.com/2011/08/12/understanding-prototypes-in-javascript/
+https://javascriptweblog.wordpress.com/2010/06/07/understanding-javascript-prototypes/
+
+
+
+
+4) this key word behaves in different manner acoordingly. if it is used outide  the function then it refers to the global context and if it is defined inside the function like i constructor then it behaves as it owns the object 
+properties and returns accordingly.
+
+<script>
+
+
+document.write(this);
+
+</script>
+
+<script>
+var office = {
+    name: "Federal",
+    domain : "UI",
+    time   : 3,
+    fullDetails: function() {
+       return this.name + " is teaching " + this.domain + " classes ";
+    }
+};
+
+document.write(office.fullDetails());
+</script>
+
+<script>
+var domain="SQL";
+var office = {
+    name: "Federal",
+    domain : "UI",
+    time   : 3,
+    fullDetails: function() {
+       return this.domain;
+    }
+};
+
+document.write(office.fullDetails(), "<br />");
+var newfunc = office.fullDetails;
+document.write(newfunc());
+</script>
+
+
+References:
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this
+http://www.quirksmode.org/js/this.html
+http://unschooled.org/2012/03/understanding-javascript-this/
+http://javascriptissexy.com/understand-javascripts-this-with-clarity-and-master-it/
+http://stackoverflow.com/questions/133973/how-does-this-keyword-work-within-a-function
+
+
+
+
+
+

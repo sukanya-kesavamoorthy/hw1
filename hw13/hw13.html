@@ -1,0 +1,64 @@
+
+<h4> example of call apply and bind methods</h4>
+<script>
+var domain="SQL";
+var office = {
+    name: "Federal",
+    domain : "UI",
+    time   : 3,
+    fullDetails: function() {
+       return this.domain;
+    }
+};
+
+document.write(office.fullDetails(), "<br />");
+var newfunc = office.fullDetails;
+document.write(newfunc());
+</script>
+
+<script>
+var domain="SQL";
+var office = {
+    name: "Federal",
+    domain : "UI",
+    time   : 3,
+    fullDetails: function() {
+       return this.domain;
+    }
+};
+
+document.write(office.fullDetails(), "<br />");
+var newfunc = office.fullDetails;
+document.write(newfunc(), "<br />");
+document.write(newfunc.call(office), "<br />");
+document.write(newfunc.apply(office));
+</script>
+
+<script>
+        
+
+
+        function mul(a,b)
+        {
+            return this.c*this.d*a*b;
+        }
+        var obj={
+            c:2,
+            d:3
+        }
+        document.write(mul.call(obj,2,3), " <br />");
+        document.write(mul.apply(obj,[1,2]), " <br />");
+        var newobj=mul.bind(obj);
+        document.write(newobj(1,1));
+        </script>
+
+
+
+
+
+
+
+
+
+
+

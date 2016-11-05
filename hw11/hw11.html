@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+
+
+<h4> difference of for each and map </h4>
+<script>
+var numbers = [4, 9, 16, 25];
+numbers.forEach(function(item,index,arr) {
+
+document.write("sqrt :"+''+Math.sqrt(item)+"<br>");
+});
+</script>
+
+<script>
+var numbers = [4, 9, 16, 25];
+document.write(numbers.map(Math.sqrt));
+
+</script>
+
+
+
+<h4> example of object method </h4>
+<script>
+var office = {
+    name: "Federal",
+    domain : "UI",
+    time   : 3,
+    fullDetails: function() {
+       return this.name + " is teaching " + this.domain + " classes ";
+    }
+};
+
+document.write(office.fullDetails());
+</script>
+
+
+
+
+
+<h3> different ways of creating objects </h3>
+
+<h4> method 1 just by creating a variable </h4>
+
+<script>
+var office = "Federal";
+document.write(office);
+</script>
+
+<h4> method 2 by creating multiple variables </h4>
+
+<script>
+var office = {
+    name : "federal",
+    domain: "UI",
+    time    : 3,
+    
+};
+
+document.write(office.name + " " + "is giving " + office.domain +" " + "training from" + office.time + " " + "months");
+</script>
+
+<h4> method 3 by using a new keyword </h4>
+
+<script>
+var office = new Object();
+office.name = "federal";
+office.domain = "UI";
+office.time = 3;
+    
+
+document.write(office.name + " " + "is giving " + office.domain +" " + "training from" + office.time + " " + "months");
+</script>
+
+<h4>  method 4 by using a constructor </h4>
+
+<script>
+
+function office(n, d, t){
+
+this.name = n;
+this.domain = d;
+this.time = t;
+
+}
+    
+var sukanya = new office("Federal", "UI",3 );
+var vinithra = new office("Federal", "SQL", 4);
+
+document.write("sukanya is learning " + sukanya.domain + " vinithra is learning  " + vinithra.domain);
+</script>
+
+
+
+<h4> example of adding a property</h4>
+
+<script>
+var office = {
+    name : "federal",
+    domain: "UI",
+    time    : 3,
+    
+};
+
+office.area = "Arkansas"
+
+document.write(office.name + " " + "is giving " + office.domain +" " + "training from" + office.time + " " + "months in " + office.area );
+</script>
+
+
+<h4> example of deleting a property</h4>
+
+
+<script>
+var office = {
+    name : "federal",
+    domain: "UI",
+    time    : 3,
+    
+};
+
+delete office.time;
+
+document.write(office.name + " " + "is giving " + office.domain +" " + "training from " + office.time + " " + " months");
+</script>
+
+<h4> example of editing a property</h4>
+
+<script>
+
+var office = {
+    name : "federal",
+    domain: "UI",
+    time    : 3,
+    
+};
+
+ office.time = 4;
+
+document.write(office.name + " " + "is giving " + office.domain +" " + "training from " + office.time + " " + " months");
+</script>
+
+<h4> example of checking a property exists or not</h4>
+
+<script>
+
+var office = {
+    name : "federal",
+    domain: "UI",
+    time    : 3,
+    
+};
+document.write(office.hasOwnProperty('name'));
+
+</script>
+
+<h4> examples of  a prototype</h4>
+
+<script>
+
+function office(n, d, t){
+
+this.name = n;
+this.domain = d;
+this.time = t;
+
+}
+    
+var sukanya = new office("Federal", "UI",3 );
+var vinithra = new office("Federal", "SQL", 4);
+
+document.write("sukanya is learning " + sukanya.domain + " vinithra is learning  " + vinithra.domain);
+</script>
+
+
+
+<script>
+
+function office(n, d, t){
+
+this.name = n;
+this.domain = d;
+this.time = t;
+
+}
+office.prototype.area = "Arkansas" ;
+ 
+var sukanya = new office("Federal", "UI",3 );
+var vinithra = new office("Federal", "SQL", 4);
+
+document.write("sukanya is learning " + sukanya.domain + " in " + sukanya.area + "and  vinithra is learning  " + vinithra.domain);
+</script>
+
+</body>
+</html>

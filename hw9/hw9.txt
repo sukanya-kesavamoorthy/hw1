@@ -1,0 +1,296 @@
+1) operational precedence
+The order in which the operators should be evaluated is known as operator precedence.
+the operator precedence from highest to lowest:
+(),[],.  --> left to right
+++,--  --> right to left
+/,*,%,+,-  --> left to right 
+>>,<<,>,>=,<,<=,==,!=  --> left to right
+&
+^
+|
+&&
+||
+
+
+Eg:
+4+5+6*2
+Ans:21 but not 30 because we need to consider operator precedence.
+in the above example the * operator has 1st precedence. so after multiplying add the remaing numbers.
+
+4+5+(6*2)
+here the() has higher priority so, the answer is 21.
+
+references:
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence
+https://msdn.microsoft.com/en-us/library/z3ks45k7(v=vs.94).aspx
+http://www.w3schools.com/js/js_arithmetic.asp
+http://www.scriptingmaster.com/javascript/operator-precedence.asp
+http://www.javascriptkit.com/jsref/precedence_operators.shtml
+
+2) differences between == and ===
+In javascript the "==" operator is known as coercion operator and the "===" operator is known as strictly equality operator.
+The difference between these two operators are, in coercion operator when comparison occurs between two variable of same type or different
+data type it converts both variables to the same data type and then it compares the variables and returns the value according to that. Whereas
+in strictly equality operator when it compares two variables it returns true when only both the value and type are same.
+
+eg:1
+
+<p id="demo"></p>
+<script>
+var x = 5;
+document.getElementById("demo").innerHTML = (x == "5");
+</script>
+
+ans: true.
+
+<p id="demo1"></p>
+<script>
+var x = 5;
+document.getElementById("demo1").innerHTML = (x === "5");
+</script>
+
+ans: false
+
+<p id="demo2"></p>
+<script>
+var x = 5;
+document.getElementById("demo2").innerHTML = (x == 5);
+</script>
+
+ans: true
+
+<p id="demo3"></p>
+<script>
+var x = 5;
+document.getElementById("demo3").innerHTML = (x === 5);
+</script>
+
+ans: true
+
+Differences between != and !==
+It is as similar as equality operators with a little difference. In "!=" operator while comparing between two variables it just compares the value
+by converting the variables into same data type if both are different and returns a value whereas in !== operator it is true if it has not equal value or not equal type
+
+eg:
+<p id="demo4"></p>
+
+<script>
+var x = 5;
+document.getElementById("demo4").innerHTML = (x != 6);
+</script>
+ans: true
+
+<p id="demo5"></p>
+
+<script>
+var x = 5;
+document.getElementById("demo5").innerHTML = (x !== 5);
+</script>
+
+ans:false
+
+<p id="demo6"></p>
+
+<script>
+var x = 5;
+document.getElementById("demo6").innerHTML = (x !== 6);
+</script>
+
+ans:true
+
+
+<p id="demo7"></p>
+
+<script>
+var x = 5;
+document.getElementById("demo7").innerHTML = (x !== "5");
+</script>
+
+ans: true
+
+Referencs:
+http://stackoverflow.com/questions/523643/difference-between-and-in-javascript
+http://www.w3schools.com/js/js_comparisons.asp
+http://www.java67.com/2013/07/difference-between-equality-strict-vs-operator-in-JavaScript-Interview-Question.html
+https://www.quora.com/What-is-the-difference-between-and-operator-in-javascript
+https://www.quora.com/In-JavaScript-what-is-the-difference-between-the-two-operators-equal-to-and-strictly-equal-to
+
+
+3) diff null and undefined
+
+In javascript "null" is considered as it has no value i.e if you just want to show no value to a variable, then it is assigned null.
+at the same time null is not "0" but the typeof operator considers null as an object. 
+Whereas undefined in javscript is a global variable that creates a runtime but it assigns a object as undefined when that object
+is declared but it hasn't given any value. i.e which has been initialized with any value.
+In this case the typeof operator results in undefined only.
+
+References:
+https://www.quora.com/What-is-the-difference-between-undefined-and-null-in-JavaScript
+http://www.w3schools.com/js/js_datatypes.asp
+http://www.tothenew.com/blog/difference-between-undefined-and-null-in-javascript/
+http://www.ajaymatharu.com/javascript-difference-between-undefined-and-null/
+http://stackoverflow.com/questions/5076944/what-is-the-difference-between-null-and-undefined-in-javascript
+
+
+4) loop (for, while and do while) and conditons (if else, switch).
+
+For loop:
+syntax:
+for(initialization;condition;increment/decrement)
+statement
+
+The basic rule used in for loop is shown above. the variable is initialize then it checks the condition and if the condition is true, then the statement is 
+executed otherwise it terminates. after the execution the variable is increased and then he loop continues till the condition fails.
+
+eg:  
+         <script>
+            var i;
+            
+            for(i = 0; i < 10; i++){
+               document.write( "the no. of loop is: " + i  );
+               document.write("<br />");
+            }
+         </script>
+         
+           
+
+Reference:
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in
+https://www.tutorialspoint.com/javascript/javascript_for_loop.htm
+http://www.w3schools.com/js/js_loop_for.asp
+
+While loop:
+syntax:
+while(condition){
+statement
+}
+
+In while loop first it checks the condition and if it is true then it is executed otherwise it is terminated.
+
+eg:
+<p id="demo8"></p>
+
+<script>
+var text = "";
+var i = 0;
+while (i < 10) {
+    text += "<br>The number of loop is " + i;
+    i++;
+}
+document.getElementById("demo8").innerHTML = text;
+</script>
+
+References:
+http://www.w3schools.com/js/js_loop_while.asp
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/while
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration
+https://www.tutorialspoint.com/javascript/javascript_while_loop.htm
+https://www.kirupa.com/html5/loops_in_javascript.htm
+
+do-while:
+syntax:
+do
+  statement
+while(condition);
+
+In do while loop the statement is executed atleast once even if the condition is false because first the statement is executed and later the condition is checked.
+
+eg:
+
+<script>
+ var i=0;
+do{
+i += 1;
+document.write("the no. of loop is: " +i , "<br />");
+}
+while(i<5);
+</script>
+
+
+
+
+References:
+https://www.kirupa.com/html5/loops_in_javascript.htm
+http://stackoverflow.com/questions/5599027/the-do-while-statement
+http://www.w3schools.com/jsref/jsref_dowhile.asp
+https://msdn.microsoft.com/en-us/library/5c1h7h0k(v=vs.94).aspx
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration
+
+If..else:
+syntax:
+if(condition){
+code to be executed
+}
+else(condition){
+code to be executed
+}
+
+In if..else statements the block of code is executed if the statement inside if is true otherwise the other block of code is executed.
+eg:
+<script>
+var age=16;
+if (age< 16){
+document.write("Minor");
+}
+else{
+document.write("Major");
+}
+
+</script>
+
+References:
+http://www.w3schools.com/js/js_if_else.asp
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else
+https://www.tutorialspoint.com/javascript/javascript_ifelse.htm
+http://webcheatsheet.com/javascript/if_else_switch.php
+http://www.echoecho.com/javascript6.htm
+
+
+Switch case:
+syntax:
+switch(expression) {
+    case n:
+        code block
+        break;
+    case n:
+        code block
+        break;
+    default:
+        default code block
+}
+eg:
+
+ <script>
+         
+            var age= 1;
+            switch (age)
+            {
+               case 1: document.write("Baby<br />");
+               break;
+            
+               case 2: document.write("Child<br />");
+               break;
+            
+               case 3: document.write("Teenager<br />");
+               break;
+            
+               case 4: document.write("Adult<br />");
+               break;
+            
+               case 5: document.write("Old age<br />");
+               break;
+            
+               default:  document.write("Not in the info<br />")
+            }
+            
+       
+      </script>
+
+References:
+http://www.w3schools.com/js/js_switch.asp
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch
+http://www.tutorialspoint.com/javascript/javascript_switch_case.htm
+http://stackoverflow.com/questions/13207927/switch-statement-multiple-cases-in-javascript
+http://stackoverflow.com/questions/2312817/javascript-switch-with-logical-operators

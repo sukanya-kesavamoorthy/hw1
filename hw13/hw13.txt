@@ -1,0 +1,79 @@
+1) java script call apply bind methods? how to use them? what are the use cases when we have to use them?
+
+The call and apply methods in javascript is almost similar. the only difference is in apply method we can pass arrays as parameters whereas in call method
+only variables are passed.These two methods are used forcefully instead of this value. when this value is used inside the function then it returns the local variable and
+when it is used outside the function or declared without using object name then it returns the global variable and there call and apply methods are used to get the local variables.
+The same way bind function also works but the difference is call and apply methods executes immediately wheras bind creates a new method and then executes.
+
+
+eg:
+<script>
+var domain="SQL";
+var office = {
+    name: "Federal",
+    domain : "UI",
+    time   : 3,
+    fullDetails: function() {
+       return this.domain;
+    }
+};
+
+document.write(office.fullDetails(), "<br />");
+var newfunc = office.fullDetails;
+document.write(newfunc());
+</script>
+
+<script>
+var domain="SQL";
+var office = {
+    name: "Federal",
+    domain : "UI",
+    time   : 3,
+    fullDetails: function() {
+       return this.domain;
+    }
+};
+
+document.write(office.fullDetails(), "<br />");
+var newfunc = office.fullDetails;
+document.write(newfunc(), "<br />");
+document.write(newfunc.call(office), "<br />");
+document.write(newfunc.apply(office));
+</script>
+
+<script>
+        
+
+
+        function mul(a,b)
+        {
+            return this.c*this.d*a*b;
+        }
+        var obj={
+            c:2,
+            d:3
+        }
+        document.write(mul.call(obj,2,3), " <br />");
+        document.write(mul.apply(obj,[1,2]), " <br />");
+        var newobj=mul.bind(obj);
+        document.write(newobj(1,1));
+        </script>
+
+
+
+
+
+
+References:
+http://javascriptissexy.com/javascript-apply-call-and-bind-methods-are-essential-for-javascript-professionals/
+https://codeplanet.io/javascript-apply-vs-call-vs-bind/
+http://stackoverflow.com/questions/15455009/javascript-call-apply-vs-bind
+https://alexperry.io/personal/2016/04/03/How-to-use-apply-bind-and-call.html
+http://geekabyte.blogspot.com/2013/09/how-to-use-call-apply-and-bind-in.html
+
+
+
+
+
+
+

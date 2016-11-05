@@ -1,0 +1,217 @@
+
+1) explain about arr.forEach and arr.map . compare the differences?
+
+
+
+
+
+
+
+2) object and object methods (.hasOwnProperty(item))
+
+In Javascript an object is a collection of properties and property is the combinaton of key and value. they both are seperated by ba colon and
+key should be only string whereas value can be any javascript datatype.
+
+
+
+
+
+References:
+http://www.w3schools.com/js/js_object_methods.asp
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object
+http://www.htmlgoodies.com/beyond/javascript/calling-object-methods-in-javascript.html
+http://www.w3schools.com/js/js_object_definition.asp
+
+
+3) diff ways of creating an object
+The object in javascript can be creted in different methods. They are:
+first method:Assgning a value to a variable is nothing but creating an object.
+
+<script>
+var office = "Federal";
+document.write(office);
+</script>
+
+second method: when there are multiple values then
+
+<script>
+var office = {
+    name : "federal",
+    domain: "UI",
+    time    : 3,
+    
+};
+
+document.write(office.name + " " + "is giving " + office.domain +" " + "training from" + office.time + " " + "months");
+</script>
+
+Third method: By using a keyword new you can create an object.
+By using the above example but using keyword new.
+
+<script>
+var office = new Object();
+office.name = "federal";
+office.domain = "UI";
+office.time = 3;
+    
+
+document.write(office.name + " " + "is giving " + office.domain +" " + "training from" + office.time + " " + "months");
+</script>
+
+Fourth method:
+The other method of creating object is by using constructor. while using constructor we use "this" in the object as the substitute for the new object.
+It doesnt have any value assigned just used as a substitute
+
+<script>
+
+function office(n, d, t){
+
+this.name = n;
+this.domain = d;
+this.time = t;
+
+}
+    
+var sukanya = new office("Federal", "UI",3 );
+var vinithra = new office("Federal", "SQL", 4);
+
+document.write("sukanya is learning " + sukanya.domain + " vinithra is learning  " + vinithra.domain);
+</script>
+
+
+
+
+References:
+http://www.w3schools.com/js/js_objects.asp
+http://www.w3schools.com/js/js_object_definition.asp
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects
+http://www.htmlgoodies.com/beyond/javascript/object.create-the-new-way-to-create-objects-in-javascript.html
+http://www.howtocreate.co.uk/tutorials/javascript/objects
+
+
+4) understand about properties in object. look into about adding property, delete a property, edit property value, check if a property exists?
+
+Adding property:
+syntax: object.propertykey= "value";
+
+<script>
+var office = {
+    name : "federal",
+    domain: "UI",
+    time    : 3,
+    
+};
+
+office.area = "Arkansas"
+
+document.write(office.name + " " + "is giving " + office.domain +" " + "training from" + office.time + " " + "months in " + office.area );
+</script>
+
+
+
+Delete a property: By using delete key word the property can be deleted. By delete keyword both the key and value are deleted.
+syntax: delete object.propertykey;
+
+
+<script>
+var office = {
+    name : "federal",
+    domain: "UI",
+    time    : 3,
+    
+};
+
+delete office.time;
+
+document.write(office.name + " " + "is giving " + office.domain +" " + "training from " + office.time + " " + " months");
+</script>
+
+
+editing a property: 
+syntax: object.propertykey="value";
+
+var office = {
+    name : "federal",
+    domain: "UI",
+    time    : 3,
+    
+};
+
+ office.time = 4;
+
+document.write(office.name + " " + "is giving " + office.domain +" " + "training from " + office.time + " " + " months");
+</script>
+
+To check whether the property exists or not
+syntax:objectName.hasOwnProperty('propertyKey');
+if exists then true else false.
+
+<script>
+
+var office = {
+    name : "federal",
+    domain: "UI",
+    time    : 3,
+    
+};
+document.write(office.hasOwnProperty('name'));
+
+Refrences:
+http://www.w3schools.com/js/js_properties.asp
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors
+https://www.nczonline.net/blog/2010/07/27/determining-if-an-object-property-exists/
+http://stackoverflow.com/questions/208016/how-to-list-the-properties-of-a-javascript-object
+
+
+5) what is prototype in object
+
+In javascript every object is referred as prototype. All the objects inherit the properties and mehods from their prototye.
+while creating new objects they inherit from a prototype called object. prototype.
+creating a prototye in a standard way is by using object constructor function. in the 3rd question we have used an example for creating a object using constructor.
+In that the office function ia an prototype and by using new keyword we are creating new objects from the same prototype office.
+
+<script>
+
+function office(n, d, t){
+
+this.name = n;
+this.domain = d;
+this.time = t;
+
+}
+    
+var sukanya = new office("Federal", "UI",3 );
+var vinithra = new office("Federal", "SQL", 4);
+
+document.write("sukanya is learning " + sukanya.domain + " vinithra is learning  " + vinithra.domain);
+</script>
+
+
+we can also add new properties to the existing prototype. that is by using object.prototype.property.
+
+<script>
+
+function office(n, d, t){
+
+this.name = n;
+this.domain = d;
+this.time = t;
+
+}
+office.prototype.area = "Arkansas" ;
+ 
+var sukanya = new office("Federal", "UI",3 );
+var vinithra = new office("Federal", "SQL", 4);
+
+document.write("sukanya is learning " + sukanya.domain + " in " + sukanya.area + "and  vinithra is learning  " + vinithra.domain);
+</script>
+
+
+References:
+http://javascriptissexy.com/javascript-prototype-in-plain-detailed-language/
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/prototype
+http://www.w3schools.com/js/js_object_prototypes.asp
+http://yehudakatz.com/2011/08/12/understanding-prototypes-in-javascript/
+https://javascriptweblog.wordpress.com/2010/06/07/understanding-javascript-prototypes/
