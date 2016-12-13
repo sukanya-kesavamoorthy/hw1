@@ -1,0 +1,42 @@
+1) what is jQuery and why do we use jQuery?
+jQuery is a javascript library and which is used for making the javascript code simpler or smaller.
+It makes easier to acess ajax methods. And also it has selectors by which we can make changes for the required fields.
+It supports event handling.
+
+References:
+https://jquery.com/
+https://learn.jquery.com/about-jquery/how-jquery-works/
+https://www.tutorialspoint.com/jquery/jquery-overview.htm
+https://en.wikipedia.org/wiki/JQuery
+http://www.w3schools.com/jquery/jquery_intro.asp
+
+
+
+2) $(document).ready vs window.onload?
+
+$(document).ready is the jQuery event and it will run the code when the HTML is all ready, it doesn't wait for the images and otherthing to load
+It is used when there are many images,scripts etc to load without wasting time on loading
+if there are changes to be made further in the pages then this is used.
+
+window.onload is used when everything is loaded including images, scripts etc
+It is used when there are smaller files to load 
+It is used when there are no changes to be made to the page.
+
+References:
+https://discuss.codecademy.com/t/window-onload-vs-document-ready/19000/2
+https://www.codeproject.com/tips/632672/javascripts-document-ready-vs-window-load
+http://stackoverflow.com/questions/21742867/jquery-ready-vs-window-onload
+http://stackoverflow.com/questions/4584373/difference-between-window-load-and-document-ready-functions
+http://stackoverflow.com/questions/3698200/window-onload-vs-document-ready
+
+
+3) what is $?
+'$' symbol is used instead of jQuery. It has the same features as the jQuery.
+Used for selecting HTML elements and to perform some actions and with the help of $ we use selctors and make changes.
+
+References:
+http://stackoverflow.com/questions/1049112/what-is-the-meaning-of-symbol-in-jquery
+http://stackoverflow.com/questions/8667736/what-does-the-sign-mean-in-jquery-or-javascript
+http://www.w3schools.com/jquery/jquery_syntax.asp
+http://www.dotnetfunda.com/interviews/show/1381/what-does-dollar-sign-means-in-jquery
+http://www.w3schools.com/jquery/jquery_selectors.asp
