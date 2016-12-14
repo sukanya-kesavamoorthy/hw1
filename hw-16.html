@@ -1,0 +1,207 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+	<div>
+	<div class="class1"> Hi everyone </div>
+    <div class="class2"> Hello world </div>
+    <div class="class3"> Hello Universe </div>
+    <div class="class4"> this is div4 </div>
+    <div class="class5"> this is div5 </div>
+    <div class="class6"> this is div6</div>
+    </div>
+
+
+
+    <div>
+    <p id="id1"> this is paragraph1</p>
+
+    <p id="id2"> this is paragraph2</p>
+    </div>
+
+
+    <div>
+    <p>this is a single child </p>
+    </div>
+
+    <div>
+    <p>this is a single child </p>
+    <div> this div</div>
+    </div>
+
+        <h1>header 1</h1>
+    <h2>header 2</h2>
+    <h3>header 3</h3>
+    <h4>header 4</h4>
+
+		input with no type attribute<input><br>
+		input with type=text<input type="text"><br>
+		input with type=radio<input type="radio"><br>
+		input with type=number name<input type="number name"><br>
+		input with type=checkbox<input type="checkbox"><br>
+		input with type=date<input type="date"><br>
+		input with type=color<input type="color"><br>
+		input with type=datetime-local<input type="datetime-local"><br>
+		input with type=week<input type="week"><br>
+		<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+
+
+<script>
+			$('.class1').css('border', '3px solid black');
+
+			console.log(jQuery('.class1'));
+		</script>
+
+<script>
+			$('#id2').css('border', '3px solid red');
+
+			console.log(jQuery('#id2'));
+		</script>
+	
+<script>
+			$('p').css('border', '3px solid chocolate');
+
+			console.log(jQuery('#id2'));
+		</script>	
+
+<script>
+			$('*').css('border', '3px solid lawngreen');
+
+			console.log(jQuery('#id2'));
+		</script>		
+
+
+<script>
+			$("[type*=tex]").css('background-color','red');
+
+			console.log(jQuery("[type*=tex]"));
+		</script>
+
+<script>
+			$("[type~=name]").css('background-color','lightblue');
+
+			console.log(jQuery("[type~=name]"));
+		</script>
+
+<script>
+			$("[type$=r]").css('background-color','blue');
+
+			console.log(jQuery("[type$=r]"));
+		</script>
+<script>
+			$("[type=date]").css('color','hsl(0, 100%, 30%)');
+
+			console.log(jQuery("[type=date]"));
+		</script>
+<script>
+			$("[type!=date]").css('color','hsl(120, 100%, 75%)');
+
+			console.log(jQuery("[type!=date]"));
+		</script>		
+<script>
+			$("[type^=d]").css('color','orange');
+
+			console.log(jQuery("[type^=d]"));
+		</script>		
+
+<script>
+			$('div:eq(0)').css('background-color','red');
+
+			console.log(jQuery('div:eq(0)'));
+		</script>
+<script>
+			$('div:lt(2)').css('background-color','orange');
+
+			console.log(jQuery('div:lt(2)'));
+		</script>
+<script>
+			$('div:gt(2)').css('background-color','black');
+
+			console.log(jQuery('div:gt(2)'));
+		</script>		
+<script>
+			$('p:first').css('background-color','yellow');
+
+			console.log(jQuery('p:first'));
+		</script>
+<script>
+			$('p:last').css('background-color','cyan');
+
+			console.log(jQuery('p:last'));
+		</script>	
+<script>
+			$(':header').css('color','cyan');
+
+			console.log(jQuery(':header'));
+		</script>	
+
+
+<script>
+			$('p:even').css('color','black');
+
+			console.log(jQuery('p:even'));
+		</script>
+<script>
+			$('p:odd').css('text-transform','uppercase');
+
+			console.log(jQuery('p:odd'));
+		</script>		
+<script>
+			$(':not(p)').css('color','crimson');
+
+			console.log(jQuery(':not(p)'));
+		</script>		
+<script>
+			$(':first-child').css('text-transform','uppercase');
+
+			console.log(jQuery(':first-child'));
+		</script>
+
+<script>
+			$('div p:first-of-type').css('text-decoration','underline');
+
+			console.log(jQuery('div p:first-of-type'));
+		</script>
+
+<script>
+			$(':last-child').css('font-style','italic');
+
+			console.log(jQuery(':last-child'));
+		</script>
+
+
+<script>
+			$('div div:last-of-type').css('text-decoration','underline');
+
+			console.log(jQuery('div div:last-of-type'));
+		</script>
+
+
+<script>
+			$('div div:nth-child(3)').css('font-style','oblique');
+
+			console.log(jQuery('div div:nth-child(3)'));
+		</script>
+
+<script>
+			$('div div:nth-last-child(3)').css('font-style','oblique');
+
+			console.log(jQuery('div div:nth-last-child(3)'));
+		</script>
+<script>
+			$('div p:only-child').css('text-decoration','underline');
+
+			console.log(jQuery('div p:only-child'));
+		</script>
+<script>
+			$('div p:only-of-type').css('font-style','italic');
+
+			console.log(jQuery('div p:only-of-type'));
+		</script>
+
+
+	</body>
+</html>

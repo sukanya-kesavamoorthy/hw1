@@ -1,0 +1,121 @@
+Basic Selectors in jQuery
+
+1.all selectors
+jQuery('*') or $('*')
+This selects all the elements
+
+2.class selector
+jQuery('.class') or $('.class')
+selects elements from the specified class
+
+3.Id selector
+jQuery('#id') or $('#id')
+selects elements from the specified id
+
+4.element selector
+jQuery('element') or $('element')
+selects elements from the specified tag
+
+5. multiple selector
+jQuery('selector1','selector2','selector3') or $('selector1','selector2','selector3')
+selects all the elements from the specified selectors
+
+
+References:
+http://api.jquery.com/category/selectors/basic-css-selectors/
+http://www.w3schools.com/jquery/jquery_selectors.asp
+
+
+attriubute based selectors in jQuery
+1.Attribute contains selector[name*="value"]
+selects the elements which have the specified value in a attribute as a substring
+
+2.Attribute contains selector[name~="value"]
+selects the elements which have the specified value in a attribute after a space
+
+3.Attribute contains selector[name^="value"]
+selects the elements which have the specified value in a attribute as a starting letter or starting with that
+
+4.Attribute contains selector[name$="value"]
+selects the elements which have the specified value in a attribute as a last letter or ending with that
+
+5.Attribute equals selector[name="value"]
+by the name itself we can tell that it selects the elements which have the exactly the same specified value in a attribute 
+
+6.Attribute contains selector[name!="value"]
+opposite to the above one it selects the elements except the specified value 
+
+
+References:
+http://api.jquery.com/category/selectors/attribute-selectors/
+
+basic filter
+
+1.:eq() selector
+selects the elements which is equal to the given index
+
+2. :gt() selector
+selects the elements whose index is greater than the given index and the index starts from zero.
+
+3. :lt() selector
+selects the elements whose index is less than the given index and the index starts from zero.
+
+4. :first() selector
+selects the first index element from the specified element
+
+5. :last() selector
+selects the last index element from the specified element
+
+6. :header selector
+selects the headers from the page if tere are any headers.
+
+7. :even selector
+selects the even indices elements frm the specified element
+
+8. :odd selector
+selects the odd indices elements frm the specified element
+
+9. :not selector
+it selects all the elements except the mentioned one.
+
+
+References:
+http://api.jquery.com/category/selectors/basic-filter-selectors/
+
+child filters
+
+1. :first child selectors
+it selects all the first child of any parent in the page
+
+2. :first-of-type-selector:
+it selects the first child or the first one from the parent with the same element name
+
+3. :last-child selector
+little similar to the first one. it selects the last child from the parent
+
+4. :last-of-type selector
+again the same it selects the last child among the siblings with the same element name
+
+5.nth-child() selector
+similar to the above one but we need to mention which child and it selects that child
+
+6.nth-last-child() selector
+similar to the above one but we need to mention which child and it selects that child counting from the last
+
+7. nth-last-of-type() selector
+again it all looks similar with little differences, selects the nth child from the sibilings counting from the last with the same element name.
+
+8.nth-of-type() selector
+selects the nth child from the siblings with the same element name.
+
+9. :only-child selector
+selects the elements which has only one child
+
+10. :only-of-type selector
+selects all elements which have no siblings.
+
+
+
+References:
+http://api.jquery.com/category/selectors/child-filter-selectors/
+
