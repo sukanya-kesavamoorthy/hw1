@@ -1,0 +1,75 @@
+Content filter
+1. :contains() selector
+it selects all the elements if it contains the specified text.
+
+2. :empty selector
+it selects the elements ehich has no child.
+
+3. :has() selector
+selects the elements which has atleast one element of the specified text
+
+4. :parent selector
+selects the elements which has atleast one child node
+
+Form selector
+1. :button selector
+it selects the button and the elements which are of type button
+
+2. :checkbox selector
+by the name itself we can tell it selects only of type checkbox
+
+3. :checked selector
+it selects the elements which are checked or selected
+
+4. :disabled selector
+same as others selects only the elements which are disabled.
+
+5. :enabled selector
+again the similar thing selects the elements which are enabled
+
+6. :file selector
+selects the elements of file type
+
+7. :image selector
+it selects the elements of type image
+
+8. :input selector
+selects the elements of input type like text area, buttons, select.
+
+9. :password selector
+selects the elements of type password
+
+10. :radio selector
+selects all the elements of radio buttons
+
+11. :selected selector
+selects the elements that are selected
+
+12. :text selector
+selects elements of only type text
+
+
+Hierachy filter
+1.child selector
+it selects the all direct child elements from the specified child and parent
+
+2.Descendant selector
+it selects the elements which are descendant to the specified ancestor
+
+3.Next adjacent selector
+selects all the elements which are immediate next to the previous sibling
+
+4.Next siblings selector
+selects all the sibling elements which have the same parent and after the prev element.
+
+
+
+
+
+
+
+
+
+
+
+

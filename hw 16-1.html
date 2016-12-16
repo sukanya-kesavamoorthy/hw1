@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+</head>
+<body>
+
+<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+<div> this is a div
+     <p> this is a paragraph1</p>
+     <p>  paragraph2 <br>
+         <span> this s span </span>
+     </p>
+     <p> this is a paragraph3<br>
+         <span> this s span </span><br>
+          <span> this s span </span>
+     </p>
+
+     <p>  paragraph4</p>
+</div>
+
+<div> this is div2 
+     <span> this s span </span>
+
+</div>
+
+<p> this is paragraph5</p>
+<div></div>
+        input with type=button<input type="button" value="Input Button"><br>
+        input with type=text<input type="text"><br>
+		input with type=radio<input type="radio"><br>
+		input with type=checkbox<input type="checkbox"><br>
+		input with type=disabled<input type="email" disabled="disabled"><br>
+        input with type=enabled<input type="id"><br>
+        input with type=file<input type="file"><br>
+        input with type=image<input type="image"><br>
+        input with type=password  <input type="password"><br>
+        input with type=reset <input type="reset"><br>
+        input with type=submit <input type="submit"><br>
+
+        <script>
+			$('div:has(p)').css('color','red');
+
+			console.log(jQuery('div:has(p)'));
+		</script>
+
+<script>
+			$('div:contains(span)').css('color','orange');
+
+			console.log(jQuery('div:contains(span)'));
+		</script>
+<script>
+			$('p:parent').css('background-color','chocolate');
+
+			console.log(jQuery('p:parent'));
+		</script>
+<script>
+			$('div:empty').text( "Was empty!" ).css('background-color','yellow');
+
+			console.log(jQuery('div:empty'));
+		</script>
+
+ <script>
+			$('input:button').css('background-color','aliceblue');
+
+			console.log(jQuery('input:button'));
+		</script>
+<script>
+			$('input:checkbox').css('background-color','bisque');
+
+			console.log(jQuery('input:checkbox'));
+		</script>
+
+<script>
+			$('input:disabled').val( "this is disabled" );
+
+			console.log(jQuery('input:disabled'));
+		</script>	
+<script>
+			$('input:enabled').css('background-color','brown');
+
+			console.log(jQuery('input:enabled'));
+		</script>
+
+<script>
+			$('input:file').css('background-color','blueviolet');
+
+			console.log(jQuery('input:file'));
+		</script>	
+
+<script>
+			$('input:password').css('background-color','coral');
+
+			console.log(jQuery('input:password'));
+		</script>
+<script>
+			$('input:radio').css('border','3px red solid');
+
+			console.log(jQuery('input:radio'));
+		</script>
+<script>
+			$('input:reset').css('background-color','orange');
+
+			console.log(jQuery('input:reset'));
+		</script>
+<script>
+			$('input:submit').css('background-color','yellow');
+
+			console.log(jQuery('input:submit'));
+		</script>		
+
+<script>
+			$('div>p').css('text-transform','uppercase');
+
+			console.log(jQuery('div>p'));
+		</script>
+
+<script>
+			$('div + p').css('text-decoration','underline');
+
+			console.log(jQuery('div + p'));
+		</script>
+
+<script>
+			$('div + p').css('text-decoration','underline');
+
+			console.log(jQuery('div + p'));
+		</script>
+
+
+</body>
+</html>
