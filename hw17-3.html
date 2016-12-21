@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+
+     <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+     <script>
+
+     var data = {
+				name : 'vini', 
+				age : 35
+			}
+
+     jQuery.ajax({
+				url : 'http://rest.learncode.academy/api/johnbob/friends/585309534c920201009b6f72', 
+				method : 'PUT',
+				data : data,
+				success : function(data) {
+					console.log(data);
+				},
+				error : function(xhr){
+					console.log(xhr);
+				}
+			})
+
+     </script>
+
+
+
+
+
+
+		</body>
+</html>

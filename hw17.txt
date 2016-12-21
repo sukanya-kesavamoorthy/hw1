@@ -1,0 +1,48 @@
+http methods (get, post, put, and delete)
+
+research about how --> get, post, put and delete methods can be used 
+
+example usage is given --> http://rest.learncode.academy/
+get- using get we can reterive the data
+post- using post we can add a data
+put- using put we can modify the data
+delete- by delete we can remove the data.
+
+
+
+
+
+what is ajax?
+$.ajax --> how to use?
+
+Ajax full form is Asynchronous Javascript and XML
+with the help of ajax the data is loaded in the background without reloading the whole page and after loading in background it displays it on the site.
+S.jax is used for ajax calls using the url as a parameter
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
