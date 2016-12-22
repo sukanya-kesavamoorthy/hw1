@@ -1,0 +1,51 @@
+
+1) http status codes in restful web services
+2xx-success	
+   200- ok
+   201- created
+   202- accepted 
+3xx- Redirection
+	400- bad request 
+        401- Unauthorized
+        403- Forbidden 
+        404- Not Found
+	500- Internal Server Error
+        501- Not Implemented
+        502- Bad gateway
+        503- Service Unavailabe
+
+
+
+http://www.restapitutorial.com/httpstatuscodes.html
+http://blog.restcase.com/rest-api-error-codes-101/
+
+
+
+2) Angular JS --> MVC, MVVM (Data binding)
+
+MVC: MVC is known as model view controller
+Model-model is nothing but the data which we can get from database or in JSON format
+View- It views or displays the data in the model
+controller- it controls the data in model and view and controls how data is retreived and displayed to end user
+ 
+
+https://www.tutorialspoint.com/angularjs/angularjs_mvc_architecture.htm
+http://blog.hfarazm.com/angularjs-mvc-architecture/
+http://mrbool.com/mvc-in-angularjs/28962
+http://www.techstrikers.com/AngularJS/angularjs-mvc-pattern.php
+
+
+MVVM(Data Binding)
+Model-model is nothing but the data which we can get from database or in JSON format
+View- It views or displays the data in the model
+viewmodel- identify the changes in both view and model and update it. these updates are done by using
+
+ng-model is an angularjs directive which is two-way data binding used to update the model whenever the changes are made in input 
+
+ng-bind is also an angularjs dirctive but it is a one way data binding used to update view whenever changes are made in model
+
+
+https://dzone.com/articles/angularjs-tutorial-lesson-1
+http://www.meritsolutions.com/mobile-development/mvvm-architectural-pattern-angularjs/
+http://javabeat.net/angularjs-ng-model-ng-bind/
+https://docs.angularjs.org/api/ng/directive/ngBind
